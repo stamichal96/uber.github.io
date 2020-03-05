@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uber</title>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFc0HsUJAA1JNf71DWH96Gs1Wdz6vb3E&libraries=places&callback=initMap">
+        </script>
+    <script src="./js/script.js"></script>
+
+    <link rel="stylesheet" defer href="./css/styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="sidebar">
+            <div class="sidebar__header">
+                <img src="./images/logo.png" alt="Logo" class="logo">
+                <img src="./images/settings.svg" alt="Settings" class="settings">
+            </div>
+            <div class="section sidebar__route">
+                <h1>Route Details</h1>
+                <input id="autocomplete" class="address" type="text" placeholder="Enter destination address">
+            </div>
+            <div class="section sidebar__type">
+                <h1>Choose Class</h1>
+                <button class="type-button type-button--selected">
+                    <span class="label">Standart</span>
+                    <span class="price">15$</span>
+                </button>
+                <button class="type-button">
+                    <span class="label">Business</span>
+                    <span class="price">22$</span>
+                </button>
+                <button class="type-button">
+                    <span class="label">Business</span>
+                    <span class="price">35$</span>
+                </button>
+            </div>
+            <div class="section sidebar__order">
+                <input type="button" class="order-button order-button--show" value="Show Route" onclick="findRoute()">
+                <input type="button" class="order-button order-button--confirm" id="confirm" value="Order">
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+
+</body>
+
+</html>
